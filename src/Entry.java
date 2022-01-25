@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
 public class Entry {
+    static Scanner sc = new Scanner(System.in);
 
     private void areaBaseHeight() {
         float base, height, area;
         System.out.println("Enter Base and Height ");
-
-        Scanner sc = new Scanner(System.in);
         base = sc.nextFloat();
         height = sc.nextFloat();
 
@@ -16,7 +15,6 @@ public class Entry {
     }
 
     static private void areaSides() {
-        Scanner sc = new Scanner(System.in);
 
         int a, b ,c;
         float s;
@@ -38,7 +36,6 @@ public class Entry {
         int a, b, c;
         double r1, r2;
 
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter a, b, c: ");
         a = sc.nextInt();
         b = sc.nextInt();
@@ -50,7 +47,28 @@ public class Entry {
         System.out.println("r2 = " + r2);
     }
 
+    static private void cuboid() {
+        int length, breadth, height;
+        int totalArea, volume;
+
+        System.out.println("Enter length, breadth, height:");
+        length = sc.nextInt();
+        breadth = sc.nextInt();
+        height = sc.nextInt();
+
+        int fb = length * height;
+        int lr = breadth * height;
+        int bt = length * breadth;
+
+        totalArea = 2 * (fb + lr + bt);
+        volume = length*breadth*height;
+
+        System.out.println("Total area: " + totalArea);
+        System.out.println("Volume: " + volume);
+
+    }
+
     public static void main (String[] args) {
-        quadratic();
+        cuboid();
     }
 }
