@@ -68,7 +68,28 @@ public class Entry {
 
     }
 
+    static private void maskingAndSwapping() {
+        // Swapping
+        int a = 10, b = 15;
+        System.out.println("Initially, a: " + a + " | b: " + b);
+        a = a ^ b;
+        System.out.println("First swap, a: " + a + " | b: " + b);
+        b = a ^ b;
+        System.out.println("Second swap, a: " + a + " | b: " + b);
+        a = a ^ b;
+        System.out.println("Final swap, a: " + a + " | b: " + b);
+
+        byte x=9, y=12, c=0;
+
+        c |= (x << 4);
+        c |= y;
+
+        System.out.println(c);
+        System.out.println("X: " + Integer.toBinaryString(x) + " | Y: " + Integer.toBinaryString(y) + " | C: " + Integer.toBinaryString(c));
+
+    }
+
     public static void main (String[] args) {
-        cuboid();
+        maskingAndSwapping();
     }
 }
